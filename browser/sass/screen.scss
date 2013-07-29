@@ -1,0 +1,84 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3/transform";
+@import url(http://fonts.googleapis.com/css?family=Changa+One);
+
+$base-font-color: #333;
+$emphasis-font-color: #C00;
+
+body {
+    background-image: url('../img/background.png');
+    font-family: 'Changa One';
+    color: $base-font-color;
+}
+
+.large-text {
+    font-size: 70px;
+}
+
+.huge-text {
+    font-size: 200px;
+}
+
+#icons > img {
+    border: solid rgba(0,0,0,0) 3px;
+}
+
+#icons > img:hover {
+    border: solid rgba(0,0,0,0.2) 3px;
+}
+
+
+#fight {
+    margin-top: 100px;
+}
+
+
+#icons {
+    text-align: center;
+}
+
+#player {
+    float: left;
+}
+
+#ai {
+    float: right;
+}
+
+#VS {
+    text-align: center;
+    width: 230px;
+    margin: auto;
+    color: $emphasis-font-color;
+}
+
+#player > span, #ai > span, #VS {
+    vertical-align: middle;
+}
+
+.choice {
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+}
+
+
+#victor {
+    top: -135px;
+    position: relative;
+    text-align: center;
+    @include rotate(30deg);
+}
+
+#victor.player {
+    color: lime;
+}
+
+#victor.ai {
+    color: black;
+}
