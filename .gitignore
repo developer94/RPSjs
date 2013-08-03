@@ -1,1 +1,3 @@
 browser/.sass-cache
+node_modules
+**/libpeerconnection.log
