@@ -9,37 +9,40 @@
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
 
+    <link href="stylesheets/animate.css" media="screen" rel="stylesheet" type="text/css" />
+
     <script type='text/javascript' src='lib/jquery.js'></script>
 
     <script type='text/javascript' src='../rps-utils.js'></script>
     <script type='text/javascript' src='../rps-oop.js'></script>
+    <script type='text/javascript' src='../rps-extensions.js'></script>
 
     <script type='text/javascript' src='rps-browser.js'></script>
 </head>
 <body>
-    <div id="icons">
+    <div id="icons" class="animated">
         <img alt="rock" id="clickrock" src="img/rock.png"></img>
         <img alt="paper" id="clickpaper" src="img/paper.png"></img>
         <img alt="scissors" id="clickscissors" src="img/scissors.png"></img>
     </div>
 
-    <div id="fight">
+    <div id="fight" class="animated">
       <span id="player" class="large-text">
-          <span>You</span>
+        <span>You</span><span id="playerscore"></span>
           <span class="choice"></span>
       </span>
 
       <span id="ai" class="large-text">
           <span class="choice"></span>
-          <span>A.I.</span>
+          <span id="aiscore"></span><span>A.I.</span>
       </span>
-    </div>
 
-    <div id="VS" class="huge-text">
-      VS
-    </div>
+      <div id="VS" class="huge-text">
+        VS
+      </div>
 
-    <div id="victor" class="large-text player">
+      <div id="victor" class="large-text player">
+      </div>
     </div>
 </body>
 </html>

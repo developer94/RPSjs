@@ -5,15 +5,25 @@
 
 @import "compass/reset";
 @import "compass/css3/transform";
+@import "compass/css3/text-shadow";
 @import url(http://fonts.googleapis.com/css?family=Changa+One);
 
 $base-font-color: #333;
 $emphasis-font-color: #C00;
 
+$outline: white;
+
 body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
     background-image: url('../img/background.png');
     font-family: 'Changa One';
     color: $base-font-color;
+    @include text-shadow(1px 1px $outline, 1px 0 $outline, 0 1px $outline, -1px -1px $outline, -1px 0 $outline, 0 -1px $outline);
 }
 
 .large-text {
@@ -32,14 +42,19 @@ body {
     border: solid rgba(0,0,0,0.2) 3px;
 }
 
-
 #fight {
     margin-top: 100px;
 }
 
-
 #icons {
     text-align: center;
+    width: 1554px;
+    height: 518px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -777px;
+    margin-top: -259px
 }
 
 #player {
@@ -55,6 +70,7 @@ body {
     width: 230px;
     margin: auto;
     color: $emphasis-font-color;
+    @include text-shadow(1px 1px black);
 }
 
 #player > span, #ai > span, #VS {
@@ -77,8 +93,10 @@ body {
 
 #victor.player {
     color: lime;
+    @include text-shadow(1px 1px 1px black);
 }
 
 #victor.ai {
     color: black;
+    @include text-shadow(1px 1px 1px #777);
 }
