@@ -9,3 +9,7 @@ var utils = (function(undefined)
         randomrange: randomrange
     };
 })();
+
+if(module) {
+    module.exports = utils;
+}

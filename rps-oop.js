@@ -1,3 +1,7 @@
+if(require) {
+    var utils = require('./rps-utils');
+}
+
 var RPS = (function(utils, undefined)
 {
     "use strict";
@@ -91,3 +95,7 @@ var RPS = (function(utils, undefined)
         Weigh: Weigh
     };
 })(utils);
+
+if(module) {
+    module.exports = RPS;
+}
